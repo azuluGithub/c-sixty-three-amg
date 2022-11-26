@@ -1,0 +1,72 @@
+$card-width: 280px;
+$card-height: 350px;
+
+.CourseCard {
+     background-color: var(--clr-grey-faint);
+     width: $card-width;
+     height: $card-height;
+     background-color: var(--clr-white);
+
+     &-Container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+     }
+
+     &-ItemImage {
+          width: 100%;
+          height: calc($card-height / 2);
+          background-color: var(--clr-primary-weak);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+    &-ItemImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+     }
+
+     &-ItemInfo {
+          display: flex;
+          flex-direction: column;
+          padding: var(--space-md) var(--space-md) 0 var(--space-md);
+     }
+
+     &-ItemName {
+          text-transform: capitalize;
+          font-weight: 500;
+          font-size: var(--fs-lg);
+          color: var(--clr-primary);
+          font-family: var(--ff-tertiary);
+     }
+
+     &-ItemText {
+          padding: var(--space-md) 0;
+          color: #666;
+     }
+
+     &-ItemPeriod {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 var(--space-md) var(--space-md) var(--space-md);
+          width: calc(100% - var(--space-md) * 2);
+     }
+
+     &-ItemPeriodContent {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 14px;
+          color: #333;
+          font-weight: 600;
+     }
+
+     &-ItemPeriodClasses {
+          padding: 0 20px;
+          border-left: 1px solid #888;
+          border-right: 1px solid #888;
+     }
+}

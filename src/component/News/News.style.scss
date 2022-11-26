@@ -1,0 +1,13 @@
+.News {
+    &-Container {
+        display: flex;
+    }
+
+    &-NewsList {
+        flex: 3;
+    }
+
+    &-NewsSide {
+        flex: 1;
+    }
+}

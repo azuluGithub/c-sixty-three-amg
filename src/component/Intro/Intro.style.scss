@@ -1,0 +1,37 @@
+.Intro {
+    background-color: var(--clr-primary);
+
+    &-Item {
+        display: flex;
+        padding: var(--space-lg) 0;
+    }
+
+    &-ItemImage {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.331);
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+
+    &-ItemImg {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &-ItemTitle {
+        color: var(--clr-white);
+        font-weight: 600;
+        font-size: var(--fs-lg);
+        text-transform: capitalize;
+    }
+
+    &-ItemContent {
+        padding-top: var(--space-md);
+        max-width: 220px;
+        color: var(--clr-white);
+    }
+}

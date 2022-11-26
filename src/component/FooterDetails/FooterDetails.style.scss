@@ -1,0 +1,80 @@
+.FooterDetails {
+    background-color: var(--clr-primary);
+
+    &-ContentHeading {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        color: var(--clr-white);
+    }
+
+    &-ContentParagrph {
+        max-width: 450px;
+        margin: var(--space-lg) 0;
+        color: var(--clr-white);
+    }
+
+    &-SocialContainer {
+        display: flex;
+        margin-top: var(--space-lg);
+    }
+
+    &-SocialImage {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: var(--clr-secondary);
+        border-radius: 2px;
+    }
+
+    &-SocialImg {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &-LogoContainer {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.331);
+        width: 180px;
+        height: 200px;
+    }
+
+    &-Logo {
+        width: 80%;
+        object-fit: contain;
+    }
+
+    &-LinkElement {
+        margin: var(--space-md) 0;
+        color: var(--clr-white);
+        text-transform: capitalize;
+    }
+
+    &-LinkAnchor:hover {
+        text-decoration: underline;
+        color: var(--clr-grey-faint);
+    }
+
+    &-LinksTitle {
+        text-transform: capitalize;
+        font-weight: 900;
+        color: var(--clr-secondary);
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width: 40em) {
+        &-Content {
+            margin-bottom: var(--space-xxl);
+        }
+
+        &-LinksItem {
+            margin-bottom: var(--space-xxl);
+        }
+    }
+}

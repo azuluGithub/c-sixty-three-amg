@@ -1,0 +1,24 @@
+.Gallery {
+    background-color: var(--clr-grey-faint);
+
+    &-Container {
+        width: 100%;
+        margin: 0 auto;
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 250px;
+        grid-auto-flow: dense;
+    }
+
+    &-GalleryImage {
+        width: 100%;
+        height: 250px;
+    }
+
+    &-GalleryImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

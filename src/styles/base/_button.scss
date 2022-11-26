@@ -1,0 +1,9 @@
+:root {
+  --button-padding: 1rem 2rem;
+  --button-clr: var(--clr-white);
+  --button-background: var(--clr-primary);
+}
+
+.Button {
+  @include button;
+}

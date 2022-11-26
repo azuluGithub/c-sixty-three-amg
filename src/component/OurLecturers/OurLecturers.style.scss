@@ -1,0 +1,127 @@
+$image-slider-width: 300px;
+$image-slider-height: 500px;
+$item-image-height: 350px;
+
+.OurLecturers {
+     background-color: var(--clr-white);
+
+     &-Header {
+          display: flex;
+          justify-content: space-between;
+          padding: var(--space-xxl) 0;
+     }
+
+     &-Title {
+          font-size: var(--fs-xl);
+          font-weight: 600;
+          color: var(--clr-primary);
+     }
+
+     &-Chevrons {
+          display: flex;
+     }
+
+     &-Chevron {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          background-color: var(--clr-secondary);
+          cursor: pointer;
+  
+          &_Left {
+              transform: rotate(180deg);
+              margin-right: var(--space-sm);
+          }
+
+          &_Disabled {
+               background-color: var(--clr-grey-light);
+               cursor: not-allowed;
+          }
+     }
+
+     
+     &-ImageSlider {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: $image-slider-height;
+     }
+
+     &-ImageSliderWrapper {
+          display: flex;
+          width: calc($image-slider-width * var(--lecturers-items-number));
+          transform: translateX(calc(var(--lecturers-slider-x-position) * $image-slider-width * -1));
+          transition: all 500ms ease;
+     }
+
+     &-ImageSlide {
+          width: $image-slider-width;
+          height: $image-slider-height;
+          background-color: var(--clr-white);
+          margin-right: 30px;
+     }
+
+     &-ItemSlideContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+     }
+
+     &-ItemImage {
+          width: 100%;
+          height: $item-image-height;
+          background-color: var(--clr-primary-weak);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+    &-ItemImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+     }
+
+     &-ItemInfo {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          padding-top: var(--space-lg);
+     }
+
+     &-ItemName {
+          text-transform: capitalize;
+          font-weight: 500;
+          font-size: var(--fs-lg);
+          color: var(--clr-primary);
+          font-family: var(--ff-tertiary);
+     }
+
+     &-ItemText {
+          padding: var(--space-md) 0;
+          color: #666;
+     }
+
+     &-SocialContainer {
+          display: flex;
+     }
+
+     &-SocialImage {
+          background-color: var(--clr-secondary);
+          margin-right: 5px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+     }
+
+     &-SocialImg {
+          width: 100%;
+          object-fit: contain;
+     }
+}

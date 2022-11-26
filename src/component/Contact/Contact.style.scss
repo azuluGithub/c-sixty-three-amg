@@ -1,0 +1,80 @@
+.Contact {
+    background-color: var(--clr-white);
+
+    &-Title {
+        font-size: var(--fs-xl);
+        font-weight: 600;
+        color: var(--clr-primary);
+    }
+
+    &-Divider {
+        width: 60px;
+        height: 4px;
+        margin: var(--space-xl) 0;
+        background-color: var(--clr-secondary);
+    }
+
+    &-InfoItem {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space-lg);
+        border-bottom: 1px solid var(--clr-grey-light);
+    }
+
+    &-InfoItemImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--clr-secondary);
+        width: 30px;
+        height: 30px;
+    }
+
+    &-Img {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &-InfoItemKey {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: var(--fs-lg);
+        color: var(--clr-text);
+        padding-bottom: var(--space-sm);
+    }
+
+    &-InfoItemValue {
+        color: #666;
+    }
+
+    &-SocialContainer {
+        display: flex;
+    }
+
+    &-SocialImage {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: var(--clr-secondary);
+        border-radius: 2px;
+    }
+
+    &-SocialImg {
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    &-TextArea {
+        height: var(--space-xxxl);
+    }
+
+    &-Button {
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+}

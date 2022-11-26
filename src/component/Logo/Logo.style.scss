@@ -1,0 +1,24 @@
+.Logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &-Logo {
+        height: 60px;
+        object-fit: contain;
+    }
+
+    &-Text {
+        height: 40px;
+        object-fit: contain;
+        margin-left: -5px;
+    }
+
+    @media only screen and (max-width: 40rem) {
+        &-Img  {
+            width: 76%;
+            object-fit: cover;
+        }
+    }
+}
+
