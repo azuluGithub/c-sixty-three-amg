@@ -1,0 +1,24 @@
+.Map {
+     &-MapContainer {
+          height: 500px;
+     }
+
+     &-GmapCanvas {
+         overflow:hidden;
+         background:none !important;
+         height:auto;
+         width:100%;
+     }
+
+     &-Mapouter {
+          position:relative;
+          text-align:right;
+          height:auto;
+          width:100%;
+     }
+
+     &-IFrame { 
+          width: 100%;
+          height: 500px;
+     }
+}

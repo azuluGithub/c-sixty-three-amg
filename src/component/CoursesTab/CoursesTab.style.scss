@@ -1,0 +1,33 @@
+.CoursesTab {
+     background-color: var(--clr-grey-faint);
+     
+     &-Container {
+          padding-top: var(--space-xxxl);
+          display: flex;
+          justify-content: center;
+     }
+
+     &-Course {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 5px;
+          border: 1px solid var(--clr-grey-light);
+          padding: var(--space-sm) var(--space-md);
+          color: var(--clr-primary);
+          cursor: pointer;
+
+          &_Active {
+               background-color: var(--clr-primary);
+               border: 1px solid var(--clr-primary);
+               color: var(--clr-white);
+          }
+     }
+
+     &-CourseName {
+          font-size: var(--fs-md);
+          font-weight: 600;
+          text-transform: uppercase;
+          text-transform: uppercase;
+     }
+}

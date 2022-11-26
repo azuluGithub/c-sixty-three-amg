@@ -1,0 +1,60 @@
+$gallery-slider-width: 98.5vw;
+
+.BannerCarousel {
+    display: flex;
+    height: inherit;
+    overflow: hidden;
+
+    &-Slider {
+        position: relative;
+        overflow: hidden;
+        width: $gallery-slider-width;
+        height: var(--banner-height);
+    }
+
+    &-SliderWrapper {
+        width: calc(var(--gallery-items-length) * $gallery-slider-width);
+        display: flex;
+        transform: translateX(calc(var(--gallery-slider-x-position) * $gallery-slider-width * -1));
+        transition: all 300ms linear;
+    }
+
+    &-ImageSlide {
+        width: $gallery-slider-width;
+        height: var(--banner-height);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-SliderSelectors {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: calc(var(--overlayZIndex) + 1);
+    }
+
+    &-SliderSelector {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid var(--clr-white);
+        margin-right: 20px;
+
+        &_isActive {
+            background-color: var(--clr-white);
+        }
+
+        &:hover {
+            cursor: pointer;
+            transition: all 300ms linear;
+            transform: scale(1.5);
+        }
+    }
+}

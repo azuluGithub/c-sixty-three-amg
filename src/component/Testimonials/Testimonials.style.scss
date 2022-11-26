@@ -1,0 +1,12 @@
+.Testimonials {
+     background-color: var(--clr-white);
+     height: calc(100vh - var(--header-height));
+
+     &-Title {
+          font-size: var(--fs-xl);
+          font-weight: 600;
+          color: var(--clr-primary);
+          text-transform: capitalize;
+          padding: 80px 0;
+     }
+}

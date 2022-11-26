@@ -1,0 +1,54 @@
+.NewsLetter {
+    background-color: var(--clr-white);
+
+    &-Title {
+        font-size: var(--fs-xl);
+        font-weight: 600;
+        color: var(--clr-primary);
+    }
+
+    &-SplitContainer {
+        align-items: center;
+    }
+
+    &-Form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &-InputContainer {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+
+    &-Label {
+        color: var(--clr-text);
+        margin-bottom: var(--space-sm);
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    &-Input {
+        padding: var(--space-md) var(--space-sm);
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid var(--clr-primary-weak);
+        font-size: var(-fs-md);
+        font-family: var(--ff-primary);
+        font-weight: 400;
+    }
+
+    &-ButtonContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &-Button {
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+}

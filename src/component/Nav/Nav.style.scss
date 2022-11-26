@@ -1,0 +1,99 @@
+:root {
+    --nav-height: 40px;
+}
+
+$nav-background-color: var(--clr-primary);
+
+.Nav {
+    height: var(--nav-height);
+    background-color: $nav-background-color;
+    // position: fixed;
+    // top: 0;
+    width: 100%;
+    z-index: 60;
+
+    &-Underblock {
+        height: var(--nav-height);
+    }
+
+    &-Content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--nav-height);
+    }
+
+    &-Contacts {
+        display: flex;
+    }
+
+    &-Contact {
+        display: flex;
+        align-items: center;
+    }
+
+    &-Contact:nth-child(odd) {
+        padding-right: var(--space-md);
+    }
+
+    &-Contact:nth-child(even) {
+        padding-left: var(--space-md);
+        border-left: 1px solid var(--clr-grey-faint);
+    }
+
+    &-ContactImage {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: var(--space-sm);
+        background-color: var(--clr-secondary);
+    }
+
+    &-ContactImg {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &-ContactName {
+        color: var(--clr-white);
+        font-size: 13px;
+    }
+
+    &-Actions {
+        display: flex;
+        height: 100%;
+    }
+
+    &-Login,
+    &-Apply {
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        text-transform: capitalize;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &-Login {
+        color: var(--clr-grey-light);
+        background-color: transparent;
+
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+
+    &-Apply {
+        background-color: var(--clr-secondary);
+        color: var(--clr-white);
+        text-transform: uppercase;
+
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+}

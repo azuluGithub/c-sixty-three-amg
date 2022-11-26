@@ -1,0 +1,63 @@
+.HomeStudents {
+     min-height: 500px;
+     background-color: var(--clr-secondary);
+     display: flex;
+     align-items: center;
+     
+     &-Image {
+          height: 100px;
+          width: 100%;
+     }
+
+     &-Img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+     }
+
+     &-Container {
+          display: flex;
+          box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+          background-color: var(--clr-white);
+     }
+
+     &-Students {
+          width: 100%;
+          display: grid;
+          grid-gap: 4px;
+          justify-content: center;
+          align-items: center;
+          border: 4px solid var(--clr-white);
+          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+     }
+
+     &-Content {
+          background-color: var(--clr-primary);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: var(--space-xxl);
+          width: 1fr;
+     }
+
+     &-ContentBottomText,
+     &-ContentTopText {
+          font-size: var(--fs-xxl);
+          font-weight: 600;
+          color: var(--clr-white);
+          line-height: normal;
+     }
+
+     &-ButtonContainer {
+          margin-top: var(--space-xl);
+     }
+
+     &-Button {
+          background-color: var(--clr-secondary) !important;
+  
+          &:hover {
+              filter: opacity(0.5);
+          }
+     }
+}

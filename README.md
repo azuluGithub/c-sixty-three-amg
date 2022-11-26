@@ -97,7 +97,7 @@
     </li>
     
 ```diff
-# yarn install
+# yarn
 # yarn start
 ```
 </ul>
