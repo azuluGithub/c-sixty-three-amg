@@ -92,7 +92,7 @@
 <ul>
    <li>
       <em>
-        Start server by running the following command:
+        Start project by running the following command:
        </em>
     </li>
     
