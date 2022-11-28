@@ -1,6 +1,7 @@
 import { PureComponent } from 'react';
 
 import NewsCard from '../NewsCard';
+import NewsCategoriesCard from '../NewsCategoriesCard';
 import SearchCard from '../SearchCard';
 
 import './News.style.scss';
@@ -89,10 +90,19 @@ class NewsComponent extends PureComponent {
         );
     }
 
+    renderCategories() { 
+        return (
+            <div className='News-Categories'>
+                <NewsCategoriesCard />
+            </div>
+        );
+    }
+
     renderSide() { 
         return (
             <div className='News-NewsSide'>
                 { this.renderSearchCard() }
+                { this.renderCategories() }
             </div>
         );
     }
