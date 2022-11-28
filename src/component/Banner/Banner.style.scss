@@ -1,5 +1,5 @@
 :root {
-    --banner-height: calc(100vh - var(--header-height));
+    --banner-height: calc(100vh - var(--header-height) - var(--nav-height));
     --overlayZIndex: 5;
 }
 
@@ -8,7 +8,6 @@ $content-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 .Banner {
     position: relative;
     height: var(--banner-height);
-    background-color: var(--clr-primary-weak);
 
     &::before {
         content: '';
@@ -25,31 +24,137 @@ $content-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
         background-color: rgba(255, 255, 255, 0.342);
-
-        padding: 20px;
+        padding: var(--space-xl);
         display: flex;
         flex-direction: column;
         align-items: center;
         z-index: calc(var(--overlayZIndex) + 1);
+
+        /** testing 1 **/
+        transform: translate(-50%, -50%) scale(0);
+        animation: contentContainerScaling 1s linear forwards;
+
+        @keyframes contentContainerScaling {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        /**end of testing 1 **/
     }
 
     &-ContentHeading {
         font-size: var(--fs-xxl);
+        position: relative;
+        color: rgba(255, 255, 255, 0.342);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.42);
+
+        /** testing **/
+        opacity: 0;
+        animation: contentHeadingMoving 1s ease-in 1s forwards;
+
+        @keyframes contentHeadingMoving {
+            0% {
+                transform: translateY(-200px);
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /**end of testing **/
+
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            color: var(--clr-primary);
+            -webkit-text-stroke: 0px rgba(255, 255, 255, 0.42);
+            border-right: 2px solid var(--clr-primary);
+            overflow: hidden;
+            animation: contentHeadingAnimation 6s linear infinite;
+        }
+
+        @keyframes contentHeadingAnimation {
+            0%,10%,100%
+            {
+                width: 0%;
+            }
+            70%,90% 
+            {
+                width: 100%;
+            }
+        }
     }
 
     &-ContentText {
         padding: var(--space-xl) 0;
         font-weight: 500;
         text-align: center;
+
+        /** testing 2 **/
+        opacity: 0;
+        animation: contentTextMoving 1.2s linear 1s forwards;
+
+        @keyframes contentTextMoving {
+            0% {
+                transform: translateX(-800px);
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /**end of testing 2 **/
     }
     
     &-ContentButton {
-        box-shadow: $content-box-shadow;
+        position: relative;
+        transition: transform 0.3s ease;
+
+        /** testing 3 **/
+        opacity: 0;
+        animation: contentButtonMoving 1s linear 1s forwards;
+
+        @keyframes contentButtonMoving {
+            0% {
+                transform: translateX(800px);
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /**end of testing 3 **/
 
         &:hover {
-            filter: opacity(0.5);
+            transform: translate(-12px, -12px);
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            opacity: 0.4;
+            background: var(--clr-primary);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: translate(6px, 6px);
+        }
+
+        &:hover::before {
+            transform: translate(12px, 12px);
         }
     }
 }

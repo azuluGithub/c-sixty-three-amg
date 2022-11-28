@@ -7,14 +7,8 @@ $header-background-color: var(--clr-white);
 .Header {
     height: var(--header-height);
     background-color: $header-background-color;
-    // position: fixed;
-    // top: var(--nav-height);
     width: 100%;
     z-index: 50;
-
-    // &-Underblock {
-    //     height: var(--header-height);
-    // }
 
     &-Container {
         display: flex;
@@ -27,12 +21,42 @@ $header-background-color: var(--clr-white);
         display: none;
     }
 
+    /** testing 1 **/
+    // &-Logo {
+    //     opacity: 0;
+    //     animation: LogoMoving 1s ease-in 1s forwards;
+
+    //     @keyframes LogoMoving {
+    //         0% {
+    //             transform: translateX(-100%);
+    //         }
+    //         100% {
+    //             opacity: 1;
+    //         }
+    //     }
+    // }
+    /**end of testing 1 **/
+
     &-Navigation {
         display: flex;
         flex-direction: row;
         list-style: none;
         margin: 0;
         padding: 0;
+        
+        /**end of testing 2 **/
+        // opacity: 0;
+        // animation: NavigationMoving 2s ease-in 1.5s forwards;
+
+        // @keyframes NavigationMoving {
+        //     from {
+        //         transform: translateX(100%);
+        //     }
+        //     to {
+        //         opacity: 1;
+        //     }
+        // }
+        /**end of testing 2 **/
     }
 
     &-MenuItem {
@@ -43,7 +67,8 @@ $header-background-color: var(--clr-white);
     }
 
     &-Anchor {
-        padding: 0 12px;
+        position: relative;
+        padding: 0 14px;
         text-decoration: none;
         text-transform: uppercase;
         font-family: var(--ff-primary);
@@ -52,49 +77,32 @@ $header-background-color: var(--clr-white);
         display: flex;
         justify-content: center;
         align-items: center;
-        // color: var(--clr-text);
         color: var(--clr-primary);
-        height: calc(var(--header-height) - 4px);
+        height: var(--header-height);
 
-        &:hover,
-        &_Active {
-            font-weight: 700;
-            color: var(--clr-secondary);
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--clr-secondary);
+            transition: all 0.3s ease-in;
         }
 
         &:hover {
-            font-weight: 700;
             color: var(--clr-secondary);
-            border-bottom: 2px solid var(--clr-secondary);
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &_Active {
+            color: var(--clr-secondary);
         }
     }
-
-    // &-ButtonContainer {
-    //     display: flex;
-    //     align-items: center;
-    //     flex-direction: row;
-    //     height: var(--header-height);
-    // }
- 
-    // &-Button {
-    //     border: 2px solid var(--clr-secondary) !important;
-    //     font-weight: 600 !important;
-    //     font-size: 0.8rem !important;
-    //     text-transform: capitalize !important;
-    //     padding: 10px var(--space-lg) !important;
-        
-    //     box-shadow: var(--box-shadow);
-
-    //     &:hover {
-    //         filter: opacity(0.5);
-    //     }
-    // }
-
-    // &-SignUpButton {
-    //     margin: 0 var(--space-md) 0 var(--fs-lg) !important;
-    //     color: var(--clr-white) !important;
-    //     background-color: var(--clr-secondary) !important;
-    // }
 
     @media only screen and (max-width: 40em)  {
         &-Navigation {

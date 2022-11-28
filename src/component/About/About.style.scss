@@ -45,44 +45,4 @@
             filter: opacity(0.5);
         }
     }
-
-    // @media only screen and (max-width: 40em) {
-    //     &-Components{
-    //         min-height: auto;
-    //         flex-direction: column-reverse !important;
-    //         margin-bottom: var(--space-xxl);
-    //     }
-
-    //     &-HeadingMain {
-    //         font-size: var(--fs-xxl);
-    //         color: var(--clr-primary);
-    //     }
-
-    //     &-HeadingBottom {
-    //         padding-top: var(--space-md);
-    //         font-weight: 400;
-    //     }
-
-    //     &-ContentParagrph {
-    //         margin: var(--space-xl) 0;
-    //     }
-        
-    //     &-Image {
-    //         background-color: var(--clr-white);
-    //     }
-
-    //     &-ImageContainer {
-    //         width: 100%;
-    //         height: 250px;
-    //         margin-bottom: var(--space-xxl);
-    //     }
-
-    //     &-Img {
-    //         object-fit: cover;
-    //     }
-
-    //     & {
-    //         min-height: auto;
-    //     }
-    // }
 }

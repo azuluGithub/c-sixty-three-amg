@@ -82,7 +82,7 @@ class NewsComponent extends PureComponent {
     renderSide() { 
         return (
             <div className='News-NewsSide'>
-                Side
+                
             </div>
         );
     }

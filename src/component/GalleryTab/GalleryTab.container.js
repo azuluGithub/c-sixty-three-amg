@@ -22,7 +22,7 @@ class GalleryTab extends PureComponent {
             name: 'class',
         },
         {
-            id: 'gallery 4',
+            id: 'gallery 6',
             name: 'campus',
         },
     ];

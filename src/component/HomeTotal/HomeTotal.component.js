@@ -1,3 +1,4 @@
+
 import { PureComponent } from 'react';
 
 import './HomeTotal.style.scss';
@@ -40,7 +41,6 @@ class HomeTotal extends PureComponent {
             </div>
         );
     }
-
     
     renderListItem({ id, count, descr }) {
         return (
