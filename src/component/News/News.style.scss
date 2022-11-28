@@ -5,9 +5,14 @@
 
     &-NewsList {
         flex: 3;
+        margin-right: 30px;
     }
 
     &-NewsSide {
         flex: 1;
+    }
+
+    &-SearchCard {
+        margin-bottom: 30px;
     }
 }

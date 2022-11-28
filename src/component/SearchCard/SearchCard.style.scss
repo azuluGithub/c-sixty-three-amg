@@ -1,0 +1,28 @@
+.SearchCard {
+    background-color: var(--clr-white);
+
+    &-SearchCardForm {
+        padding: 20px;
+        border: 1px solid var(--clr-grey-light);
+    }
+
+    &-Title {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        color: var(--clr-primary);
+    }
+
+    &-Divider {
+        width: 60px;
+        height: 4px;
+        margin: var(--space-xl) 0;
+        background-color: var(--clr-secondary);
+    }
+
+    &-Button {
+        width: 100%;
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+}
