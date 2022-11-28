@@ -44,6 +44,7 @@
      &-CountContainer {
           margin-right: 10px;
           height: 100px;
+          min-width: 108px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -60,8 +61,8 @@
           display: flex;
           justify-content: center;
           flex-direction: column;
-          font-size: 18px;
-          font-weight: 700;
+          font-size: 17px;
+          font-weight: 600;
           color: var(--clr-white);
           text-transform: uppercase;
      }
