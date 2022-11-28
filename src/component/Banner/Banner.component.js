@@ -1,6 +1,5 @@
 import { createRef, PureComponent } from 'react';
 
-// import TypeWriterEffect from '../TypeWriterEffect';
 import BannerCarousel from '../BannerCarousel';
 
 import './Banner.style.scss';
@@ -29,11 +28,6 @@ class BannerComponent extends PureComponent {
   renderContent() {
     return (
       <div className='Banner-Content'>
-        {/* <h2 className='Banner-ContentHeading'> */}
-          {/* <TypeWriterEffect
-            text={['THE BEST NURSING COLLEGE', 'TOP NURSING COLLEGE',  'JOIN ACADEMIC EXCELLENCE', 'PRESTIGIOUS NURSING COLLEGE']}
-          /> */}
-        {/* </h2> */}
         <h2 data-text='LIGHT¬BREEDS¬WISDOM' className='Banner-ContentHeading'>
           {'LIGHT¬BREEDS¬WISDOM'}
         </h2>
