@@ -19,7 +19,7 @@ class CourseCard extends PureComponent {
                     </div>
                     <div className='CourseCard-ItemInfo'>
                         <span className='CourseCard-ItemName'>{ name }</span>
-                        <p className='CourseCard-ItemText'>{ description.substring(0, 50) + '...'}</p>
+                        <p className='CourseCard-ItemText'>{ description.substring(0, 40) + '...'}</p>
                     </div>
                     <div className='CourseCard-ItemPeriod'>
                         <div className='CourseCard-ItemPeriodContent'>
