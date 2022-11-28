@@ -49,6 +49,46 @@
         font-weight: 500;
     }
 
+    &-Split {
+        overflow: hidden;
+    }
+
+    &-Latest {
+        &_FadeIn,
+        &_Appear {
+            transition: opacity 250ms ease, 
+            transform 1000ms ease;
+        }
+
+        &_FadeIn {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+        
+        &_Appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &-UpcomingEventsContainer {
+        &_FadeIn,
+        &_Appear {
+            transition: opacity 250ms ease, 
+            transform 1000ms ease;
+        }
+
+        &_FadeIn {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        
+        &_Appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
     &-UpcomingEvents {
         display: flex;
         flex-direction: column;

@@ -5,10 +5,44 @@
         font-size: var(--fs-xl);
         font-weight: 600;
         color: var(--clr-primary);
+        &_FadeIn,
+        &_Appear {
+            transition: opacity 250ms ease, 
+            transform 1000ms ease;
+        }
+
+        &_FadeIn {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+        
+        &_Appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     &-SplitContainer {
         align-items: center;
+        overflow: hidden;
+    }
+
+    &-NewsLetterForm {
+        &_FadeIn,
+        &_Appear {
+            transition: opacity 250ms ease, 
+            transform 1000ms ease;
+        }
+
+        &_FadeIn {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        
+        &_Appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     &-Form {

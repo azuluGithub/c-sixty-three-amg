@@ -4,6 +4,19 @@
     &-Item {
         display: flex;
         padding: var(--space-lg) 0;
+
+        &_FadeIn,
+        &_Appear {
+            transition: all 300ms ease-in;
+        }
+
+        &_FadeIn {
+            opacity: 0;
+        }
+        
+        &_Appear {
+            opacity: 1;
+        }
     }
 
     &-ItemImage {

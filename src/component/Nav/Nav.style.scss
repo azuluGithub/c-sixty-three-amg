@@ -7,14 +7,8 @@ $nav-background-color: var(--clr-primary);
 .Nav {
     height: var(--nav-height);
     background-color: $nav-background-color;
-    // position: fixed;
-    // top: 0;
     width: 100%;
     z-index: 60;
-
-    &-Underblock {
-        height: var(--nav-height);
-    }
 
     &-Content {
         display: flex;
@@ -25,6 +19,19 @@ $nav-background-color: var(--clr-primary);
 
     &-Contacts {
         display: flex;
+
+        /**end of testing 1 **/
+        // animation: ContactsMoving 0.5s ease-in;
+
+        // @keyframes ContactsMoving {
+        //     0% {
+        //         transform: translateY(-100%);
+        //     }
+        //     100% {
+        //         opacity: 1;
+        //     }
+        // }
+        /**end of testing 1 **/
     }
 
     &-Contact {
@@ -62,6 +69,20 @@ $nav-background-color: var(--clr-primary);
     &-Actions {
         display: flex;
         height: 100%;
+
+        /**end of testing 2 **/
+        // opacity: 0;
+        // animation: ActionsMoving 0.5s ease-in 0.5s forwards;
+
+        // @keyframes ActionsMoving {
+        //     0% {
+        //         transform: translateY(-100%);
+        //     }
+        //     100% {
+        //         opacity: 1;
+        //     }
+        // }
+        /**end of testing 2 **/
     }
 
     &-Login,

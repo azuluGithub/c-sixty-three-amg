@@ -64,12 +64,6 @@ class Header extends PureComponent {
             url: "/contact",
             type: "text",
         },
-        // {
-        //     id: "sign-up",
-        //     name: "APPLY NOW",
-        //     url: "/auth/sign-up",
-        //     type: "button",
-        // }
     ];
 
     setComponentItems() {
@@ -105,7 +99,7 @@ class Header extends PureComponent {
 
     renderLogo() {
         return (
-            <Link className='Link' to='/'>
+            <Link className='Link Header-Logo' to='/'>
                 <Logo />
             </Link>
         );
@@ -185,33 +179,10 @@ class Header extends PureComponent {
         );
     }
 
-    // renderItemButton(item) {
-    //     const { id, url, name } = item;
-    //     const isApply = id === 'sign-up' && 'Header-SignUpButton';
-
-    //     return (
-    //         <Link 
-    //             key={id} 
-    //             className='Link Header-ButtonContainer' 
-    //             to={url}
-    //             onClick={() => this.setActiveLink(item)}
-    //         >
-    //             <button className={`Header-Button Button ${isApply}`}>{name}</button>
-    //         </Link>
-    //     );
-    // }
-
     renderMenuItem({ type, ...others }) {
 
         return type === 'text' && this.renderItemText(others);
     }
-
-    // renderMenuItem({ type, ...others }) {
-
-    //     return type === 'text'
-    //             ? this.renderItemText(others)
-    //             : this.renderItemButton(others);
-    // }
 
     renderNavigation() {
         const { navIconRef } = this;
@@ -229,12 +200,6 @@ class Header extends PureComponent {
             </nav>
         );
     }
-
-    // renderUnderblock() {
-    //     return (
-    //         <div className="Header-Underblock"></div>
-    //     );
-    // }
 
     renderHeader() {
         return (
