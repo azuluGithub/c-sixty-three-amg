@@ -1,0 +1,38 @@
+.NewsCategoriesCard {
+    background-color: var(--clr-white);
+    padding: 20px;
+    border: 1px solid var(--clr-grey-light);
+
+    &-Title {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        color: var(--clr-primary);
+    }
+
+    &-Divider {
+        width: 60px;
+        height: 4px;
+        margin: var(--space-lg) 0;
+        background-color: var(--clr-secondary);
+    }
+
+    &-Card {
+        padding: var(--space-md) 0;
+        border-bottom: 1px solid var(--clr-grey-light);
+
+        &:nth-last-child(-n+1) {
+            border-bottom: none;
+        }
+    }
+
+    &-Name {
+        text-transform: capitalize;
+    }
+
+    &-Button {
+        width: 100%;
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+}
