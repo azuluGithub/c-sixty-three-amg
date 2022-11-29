@@ -1,0 +1,34 @@
+.LoginForm {
+    background-color: var(--clr-white);
+
+    &-LoginFormForm {
+        padding: var(--space-lg);
+    }
+
+    &-Title {
+        font-size: var(--fs-xl);
+        font-weight: 600;
+        color: var(--clr-primary);
+        margin-bottom: var(--space-xl);
+    }
+
+    &-ButtonContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--space-md);
+    }
+
+    &-LoginButton,
+    &-CancelButton {
+        width: 100%;
+
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+
+    &-CancelButton {
+        background-color: var(--clr-secondary) !important;
+        margin-right: 5px;
+    }
+}
