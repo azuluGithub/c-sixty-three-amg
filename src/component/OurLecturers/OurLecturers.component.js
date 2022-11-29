@@ -1,6 +1,5 @@
 import { PureComponent } from 'react';
 
-import { OUR_LECTURES_TIMEOUT } from './OurLectures.config';
 import Chevron from '../../util/Icons/Chevron';
 import CSS from '../../util/CSS';
 
@@ -253,18 +252,6 @@ class OurLecturers extends PureComponent {
     }
 
     renderHeader() {
-        const { activeSlide } = this.state;
-        const { numberOfItems } = this;
-
-        setTimeout(() => {
-            this.handleRightClick();
-
-            if (activeSlide + 1 === numberOfItems) {
-                this.setState({ activeSlide: -1 });
-            }
-
-        }, OUR_LECTURES_TIMEOUT);
-
         return (
             <div className='OurLecturers-Header'>
                 { this.renderTitle() }
