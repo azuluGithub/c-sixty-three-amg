@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CSS from '../../util/CSS';
 
 import './TestimonialsCarousel.style.scss';
+import { TESTIMONIALS_TIMEOUT } from './TestimonialsCarousel.config';
 
 class TestimonialsCarouselComponent extends PureComponent {
 
@@ -130,6 +131,22 @@ class TestimonialsCarouselComponent extends PureComponent {
     }
 
     renderTestimonialsCarousel() {
+        
+        const { activeSlide } = this.state;
+        const { numberOfItems } = this;
+
+        setTimeout(() => {
+            this.setActiveSlide(activeSlide + 1);
+
+            if (activeSlide + 1 === numberOfItems && numberOfItems !== 0) {
+                // this.setActiveSlide(1);
+                // this.setState({ activeSlide: 1 });
+                this.setActiveSlide(0);
+                console.log('active ---> ' + activeSlide);
+                console.log('numberOfItems ---> ' + numberOfItems);
+                // this.setState({ activeSlide: 0 });
+            }
+        }, TESTIMONIALS_TIMEOUT);
         return (
             <div className='TestimonialsCarousel'>
               { this.renderGallerySlider() }

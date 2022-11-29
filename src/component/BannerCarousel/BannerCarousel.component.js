@@ -2,7 +2,7 @@ import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import CSS from '../../util/CSS';
-
+import { CAROUSEL_TIMEOUT } from './BannerCarousel.config';
 import './BannerCarousel.style.scss';
 
 class BannerCarouselComponent extends PureComponent {
@@ -91,6 +91,22 @@ class BannerCarouselComponent extends PureComponent {
     }
 
     renderBannerCarousel() {
+        const { activeSlide } = this.state;
+        const { numberOfItems } = this;
+
+        setTimeout(() => {
+            this.setActiveSlide(activeSlide + 1);
+
+            if (activeSlide + 1 === numberOfItems && numberOfItems !== 0) {
+                // this.setActiveSlide(1);
+                // this.setState({ activeSlide: 1 });
+                this.setActiveSlide(0);
+                console.log('active ---> ' + activeSlide);
+                console.log('numberOfItems ---> ' + numberOfItems);
+                // this.setState({ activeSlide: 0 });
+            }
+        }, CAROUSEL_TIMEOUT);
+
         return (
             <div className='BannerCarousel'>
               { this.renderGallerySlider() }
