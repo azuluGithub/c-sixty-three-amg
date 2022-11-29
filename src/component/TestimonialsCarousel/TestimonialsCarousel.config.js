@@ -1,1 +1,0 @@
-export const TESTIMONIALS_TIMEOUT = 5000;
