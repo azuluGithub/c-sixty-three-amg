@@ -1,0 +1,1 @@
+export const FEATURED_COURSES_TIMEOUT = 5000;

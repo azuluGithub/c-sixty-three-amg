@@ -2,6 +2,7 @@ import { PureComponent } from 'react';
 
 import Chevron from '../../util/Icons/Chevron';
 import CSS from '../../util/CSS';
+import { FEATURED_COURSES_TIMEOUT } from './FeacturedCourses.config';
 
 import './FeaturedCourses.style.scss';
 
@@ -178,6 +179,18 @@ class FeaturedCourses extends PureComponent {
     }
 
     renderComponents() {
+        const { activeSlide } = this.state;
+        const { numberOfItems } = this;
+
+        setTimeout(() => {
+            this.handleRightClick();
+
+            if (activeSlide + 1 === numberOfItems) {
+                this.setState({ activeSlide: -1 });
+            }
+
+        }, FEATURED_COURSES_TIMEOUT);
+
         return (
           <section className='FeaturedCourses PaddedContainer'>
             <div className='ContainerWrapper'>

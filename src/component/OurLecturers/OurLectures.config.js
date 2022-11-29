@@ -1,0 +1,1 @@
+export const OUR_LECTURES_TIMEOUT = 6000;
