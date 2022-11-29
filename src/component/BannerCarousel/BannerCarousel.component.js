@@ -106,6 +106,18 @@ class BannerCarouselComponent extends PureComponent {
                 // this.setState({ activeSlide: 0 });
             }
         }, CAROUSEL_TIMEOUT);
+        
+        // const { activeSlide } = this.state;
+        // const { numberOfItems } = this;
+
+        // setTimeout(() => {
+        //     this.handleRightClick();
+
+        //     if (activeSlide + 1 === numberOfItems) {
+        //         this.setState({ activeSlide: -1 });
+        //     }
+
+        // }, FEATURED_COURSES_TIMEOUT);
 
         return (
             <div className='BannerCarousel'>
