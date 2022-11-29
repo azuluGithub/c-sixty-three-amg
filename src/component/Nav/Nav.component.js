@@ -1,6 +1,8 @@
 import { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 
+import LoginForm from '../LoginForm';
+
 import './Nav.style.scss';
 
 class NavComponent extends PureComponent {
@@ -46,19 +48,16 @@ class NavComponent extends PureComponent {
     renderActions() {
         return (
             <div className='Nav-Actions'>
-                <Link className='Link' to='/auth/sign-in'>
+                <div className='Nav-DropDown'>
                     <button className='Nav-Login'>{'login'}</button>
-                </Link>
+                    <div className='Nav-DropDownContent'>
+                        <LoginForm />
+                    </div>
+                </div>
                 <Link className='Link' to='/auth/sign-up'>
                     <button className='Nav-Apply'>{'apply now'}</button>
                 </Link>
             </div>
-        );
-    }
-
-    renderUnderblock() {
-        return (
-            <div className="Nav-Underblock"></div>
         );
     }
 
@@ -77,7 +76,6 @@ class NavComponent extends PureComponent {
         return (
             <div className='Nav'>
                 { this.renderContent() }
-                { this.renderUnderblock() }
             </div>
         );
     }
