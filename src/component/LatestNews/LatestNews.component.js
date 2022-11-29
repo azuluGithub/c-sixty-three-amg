@@ -172,7 +172,7 @@ const LatestNews = () => {
     const renderLatestButton = () => {
         return (
             <div className='LatestNews-ButtonContainer'>
-                <button className='LatestNews-Button Button'>{'View All'}</button>
+                <button className='LatestNews-Button LayeredButton Button'>{'View All'}</button>
             </div>
         );
     }
@@ -180,7 +180,7 @@ const LatestNews = () => {
     const renderUpcomingButton = () => {
         return (
             <div className='LatestNews-ButtonContainer'>
-                <button className='LatestNews-Button Button'>{'View All'}</button>
+                <button className='LatestNews-Button LayeredButton Button'>{'View All'}</button>
             </div>
         );
     }

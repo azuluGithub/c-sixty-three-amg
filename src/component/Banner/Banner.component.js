@@ -38,7 +38,7 @@ class BannerComponent extends PureComponent {
           {'Mpumalanga College of Nursing is a public nursing training college in Mpumalanga, South Africa with campus in Kabokweni, Mbombela.'}
         </p>
         <div className='Banner-ButtonContainer'>
-          <button className='Banner-ContentButton Button'>{'START A COURSE'}</button>
+          <button className='Banner-ContentButton LayeredButton Button'>{'START A COURSE'}</button>
         </div>
       </div>
     );
