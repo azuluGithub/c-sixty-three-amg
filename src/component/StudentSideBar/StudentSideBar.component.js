@@ -5,54 +5,75 @@ import './StudentSideBar.style.scss';
 
 class StudentSideBarComponent extends PureComponent {
 
+    user = {
+        imgUrl: '/assets/portal/images/user2.png',
+    }
+
     linksList = [
         {
-            id: 'home',
-            imgUrl: '/assets/icons/sidebar/dashboard-icon.png',
+            id: 'dashboard',
+            imgUrl: '/assets/portal/icons/dashboard.png',
             url: '/student',
             name: 'dashboard',
         },
         {
-            id: 'my-courses',
-            imgUrl: '/assets/icons/sidebar/graduation-cap-icon.png',
+            id: 'courses-admin',
+            imgUrl: '/assets/portal/icons/course-admin.png',
             url: '/student/courses',
-            name: 'my courses',
+            name: 'course admin',
         },
         {
-            id: 'settings',
-            imgUrl: '/assets/icons/sidebar/settings-icon.png',
-            url: '/student/settings',
-            name: 'settings',
+            id: 'accounts',
+            imgUrl: '/assets/portal/icons/accounts.png',
+            url: '/student/accounts',
+            name: 'accounts',
         },
         {
-            id: 'logOut',
-            imgUrl: '/assets/icons/sidebar/logout-icon.png',
-            url: '/auth/sign-in',
-            name: 'logOut',
+            id: 'notifications',
+            imgUrl: '/assets/portal/icons/notifications.png',
+            url: '/student',
+            name: 'notifications',
+        },
+        {
+            id: 'profile',
+            imgUrl: '/assets/portal/icons/user-profile.png',
+            url: '/student/profile',
+            name: 'profile',
         },
     ];
 
     state = {
-        activeLink: ''
+        // activeLink: ''
     }
 
     handleActiveLink(link) {
-        this.setState({ activeLink: link });
+        // this.setState({ activeLink: link });
     }
 
     renderTop() {
+        const { user: { imgUrl } } = this;
+
         return (
             <div className='StudentSideBar-Top'>
-                <span className='StudentSideBar-Logo'>{'MP'}</span>
-                <span  className='StudentSideBar-Brand'>{'College'}</span>
+                <div className='StudentSideBar-TopImage'>
+                    <img
+                        className='StudentSideBar-TopImg'
+                        src={imgUrl}
+                        alt='student profile display'
+                    />
+                </div>
+                <div className='StudentSideBar-TopTextContainer'>
+                    <div className='StudentSideBar-TopText'>{'My Portal'}</div>
+                </div>
             </div>
         );
     }
 
     renderLink(item) {
-        const { activeLink } = this.state;
+        // const { activeLink } = this.state;
         const { id, imgUrl, url, name } = item;
-        const isActive = activeLink === name && 'StudentSideBar-ListItem_Active';
+        // const isActive = activeLink === name && 'StudentSideBar-ListItem_Active';
+        const isActive = name === 'dashboard' && 'StudentSideBar-ListItem_Active';
 
         return (
             <Link
@@ -62,11 +83,13 @@ class StudentSideBarComponent extends PureComponent {
                 onClick={() => this.handleActiveLink(name)}
             >
                 <li className={`StudentSideBar-ListItem ${isActive}`}>
-                    <img
-                        className='StudentSideBar-ListItemIcon'
-                        src={imgUrl}
-                        alt={`${name} displayed`}
-                    />
+                    <div className='StudentSideBar-ListItemIconContainer'>
+                        <img
+                            className='StudentSideBar-ListItemIcon'
+                            src={imgUrl}
+                            alt={`${name} displayed`}
+                        />
+                    </div>
                     <span className='StudentSideBar-ListText'>{name}</span>
                 </li>
             </Link>
@@ -77,9 +100,9 @@ class StudentSideBarComponent extends PureComponent {
         return this.linksList.map(this.renderLink.bind(this));
     }
 
-    renderBottom() {
+    renderCenter() {
         return (
-            <div className='StudentSideBar-Bottom'>
+            <div className='StudentSideBar-Center'>
                 <ul className='StudentSideBar-List'>
                     { this.renderLinks() }
                 </ul>
@@ -87,11 +110,42 @@ class StudentSideBarComponent extends PureComponent {
         );
     }
 
+    renderBottom() {
+        const logOutImg = '/assets/portal/icons/power-off.png';
+
+        return (
+            <div className='StudentSideBar-Bottom'>
+                <div className='StudentSideBar-Logout'>
+                    <div className='StudentSideBar-LogoutItem StudentSideBar-LogoutItem_Active'>
+                        <img
+                            className='StudentSideBar-LogoutItemIcon'
+                            src={logOutImg}
+                            alt='logout from application icon'
+                        />
+                        <span className='StudentSideBar-LogoutText'>{'LOGOUT'}</span>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    renderDivider() {
+        return (
+            <div className='StudentSideBar-Divider'></div>
+        );
+    }
+
     renderSideBar() {
         return (
             <div className='StudentSideBar'>
-                { this.renderTop() }
-                { this.renderBottom() }
+                <div className='StudentSideBar-LinksContainer'>
+                    { this.renderTop() }
+                    { this.renderDivider() }
+                    { this.renderCenter() }
+                </div>
+                <div className='StudentSideBar-LogoutContainer'>
+                    { this.renderBottom() }
+                </div>
             </div>
         );
     }
