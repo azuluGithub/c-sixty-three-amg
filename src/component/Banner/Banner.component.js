@@ -9,9 +9,9 @@ class BannerComponent extends PureComponent {
   bannerSliderWrapperRef = createRef();
 
   gallery = [
-     `${process.env.PUBLIC_URL}/assets/images/banner/banner-img-3.jpg`,
-     `${process.env.PUBLIC_URL}/assets/images/banner/banner-img-2.jpg`,
-     `${process.env.PUBLIC_URL}/assets/images/banner/banner-img-1.jpg`,
+     `${process.env.PUBLIC_URL}/assets/images/banner/banner-img-3-cropped.png`,
+     `${process.env.PUBLIC_URL}/assets/images/banner/banner-img-2-cropped.png`,
+     `${process.env.PUBLIC_URL}/assets/images/banner/banner-img-1-cropped.png`,
   ];
 
   renderBannerCarousel() {
