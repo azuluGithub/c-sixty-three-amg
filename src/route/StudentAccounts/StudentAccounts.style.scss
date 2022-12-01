@@ -1,0 +1,223 @@
+.StudentAccounts {
+    background-color: var(--clr-grey-faint);
+    
+    &-Components {
+        display: flex;
+    }
+
+    &-Main {
+        width: 100%;
+        margin: 2rem 1rem;
+    }
+
+    &-MainBillingAddress {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    &-BillingAddress {
+        flex: 2.8;
+        margin-right: 2rem;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.75rem;
+        padding-top: 24px;
+        box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+    }
+
+    &-StudentDetails {
+        flex: 1.2;
+    }
+
+    &-BillingAddressCard {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 24px;
+        margin-bottom: 8px;
+        margin-top: 16px;
+        background: rgb(248, 249, 250);
+        color: rgb(52, 71, 103);
+        border-radius: 0.5rem;
+    }
+
+    &-BillingAddressTitle {
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: 0.0075em;
+        color: rgb(52, 71, 103);
+        font-weight: 600;
+        padding-left: 1rem;
+    }
+
+    &-BillingAddressList {
+        padding: 8px 16px 16px;
+    }
+
+    &-AddressItemTitle {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        letter-spacing: 0.02857em;
+        text-transform: capitalize;
+        color: rgb(52, 71, 103);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &-AddressItemDataKey {
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 1.25;
+        letter-spacing: 0.03333em;
+        color: rgb(123, 128, 154);
+        text-transform: capitalize;
+    }
+
+    &-AddressItemDataValue {
+        font-size: 0.75rem;
+        line-height: 1.25;
+        letter-spacing: 0.03333em;
+        color: rgb(52, 71, 103);
+        font-weight: 600;
+    }
+
+    &-BillingAddressActions {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    &-BillingAddressActionsEdit,
+    &-BillingAddressActionsDelete {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0.625rem 1.5rem;
+    }
+
+    &-BillingAddressActionsEditImage,
+    &-BillingAddressActionsDeleteImage {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &-BillingAddressActionsEditImg,
+    &-BillingAddressActionsDeleteImg {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &-BillingAddressActionsDeleteText,
+    &-BillingAddressActionsEditText {
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    &-BillingAddressActionsDeleteText {
+        color: rgb(244, 67, 53);
+    }
+
+    &-BillingAddressActionsEditText {
+        color: rgb(52, 71, 103);
+    }
+
+    &-StudentCard {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    &-StudentCardImg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 0.75rem;
+        box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+    }
+
+    &-PaymentInfo {
+        display: flex;
+    }
+
+    &-PaymentInfoCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        padding: 16px 24px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.75rem;
+        box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+        
+        &:nth-child(1) {
+            margin-right: 2rem;
+        }
+    }
+
+    &-PaymentInfoCardImage {
+        display: grid;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
+        border-radius: 0.5rem;
+        box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem;
+    }
+
+    &-PaymentInfoCardImg {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
+    &-PaymentInfoCardContent {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        height: 100%
+    }
+
+    &-PaymentInfoCardTitle {
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: 0.0075em;
+        color: rgb(52, 71, 103);
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    &-PaymentInfoCardDescription {
+        font-size: 0.75rem;
+        line-height: 1.25;
+        letter-spacing: 0.03333em;
+        color: rgb(123, 128, 154);
+        font-weight: 400;
+    }
+
+    &-PaymentInfoCardDivider {
+        height: 2px;
+        width: 100%;
+        margin: 1rem 0px;
+        opacity: 0.25;
+        background-image: linear-gradient(to right, rgba(52, 71, 103, 0), rgba(52, 71, 103, 0.4), rgba(52, 71, 103, 0)) !important; 
+    }
+
+    &-PaymentInfoCardAmount {
+        font-size: 1.25rem;
+        line-height: 1.375;
+        color: rgb(52, 71, 103);
+        font-weight: 600;
+    }
+}

@@ -2,10 +2,10 @@ import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import LecturerDashboardComponent from './LecturerDashboard.component';
+import StudentAccountsComponent from './StudentAccounts.component';
 import { overlayAction } from '../../store/Overlay/Overlay.action';
 import { routeAction } from '../../store/Route/Route.action';
-import { LECTURER_PAGE, LECTURER_PAGE_ROUTE } from './LecturerDashboard.config';
+import { STUDENT_PAGE, STUDENT_PAGE_ROUTE } from './StudentAccounts.config';
 
 const mapStateToProps = (state) => ({});
 
@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => ({
     routeAction: (route) => dispatch(routeAction(route)),
 })
 
-class LecturerDashboard extends PureComponent {
+class StudentAccounts extends PureComponent {
     static propTypes = {
         overlayAction: PropTypes.func.isRequired,
         routeAction: PropTypes.func.isRequired,
@@ -24,12 +24,13 @@ class LecturerDashboard extends PureComponent {
         const { routeAction } = this.props;
         
         const currentRoute = {
-            name: LECTURER_PAGE,
-            path: LECTURER_PAGE_ROUTE,
+            name: STUDENT_PAGE,
+            path: STUDENT_PAGE_ROUTE,
         };
 
         routeAction(currentRoute);
     }
+
 
     componentDidMount() {
         this.closeOverLay();
@@ -52,7 +53,7 @@ class LecturerDashboard extends PureComponent {
 
     renderComponent() {
         return (
-            <LecturerDashboardComponent
+            <StudentAccountsComponent
                 { ...this.containerProps() }
                 { ...this.containerFunctions() }
             />
@@ -64,4 +65,4 @@ class LecturerDashboard extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (LecturerDashboard);
+export default connect(mapStateToProps, mapDispatchToProps) (StudentAccounts);

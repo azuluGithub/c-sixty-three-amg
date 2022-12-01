@@ -15,7 +15,7 @@ import SignIn from '../../route/SignIn';
 import SignUp from '../../route/SignUp';
 import AdminDashboard from '../../route/AdminDashboard';
 import StudentDashboard from '../../route/StudentDashboard';
-import LecturerDashboard from '../../route/LecturerDashboard';
+import StudentAccounts from '../../route/StudentAccounts';
 
 import { TOP_ELEMENTS, MAIN_ELEMENTS } from './Router.config';
 
@@ -38,7 +38,7 @@ class RouterComponent extends PureComponent {
     { component: <Route path="/contact" component={ContactPage} key='contact'/> },
     { component: <Route path="/admin" exact component={AdminDashboard} key='admin-dashboard'/> },
     { component: <Route path="/student" exact component={StudentDashboard} key='student-dashboard'/> },
-    { component: <Route path="/lecturer" exact component={LecturerDashboard} key='lecturer-dashboard'/> },
+    { component: <Route path="/student/accounts" component={StudentAccounts} key='student-accounts'/> },
     { component: <Route component={NoMatch} key='nomatch'/> },
   ];
 

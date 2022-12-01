@@ -73,7 +73,7 @@ class StudentSideBarComponent extends PureComponent {
         // const { activeLink } = this.state;
         const { id, imgUrl, url, name } = item;
         // const isActive = activeLink === name && 'StudentSideBar-ListItem_Active';
-        const isActive = name === 'dashboard' && 'StudentSideBar-ListItem_Active';
+        const isActive = name === 'accounts' && 'StudentSideBar-ListItem_Active';
 
         return (
             <Link
