@@ -1,0 +1,21 @@
+[debug] [2024-07-29T19:16:36.582Z] ----------------------------------------------------------------------
+[debug] [2024-07-29T19:16:36.586Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sipho Mahlangu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-29T19:16:36.587Z] CLI Version:   13.14.2
+[debug] [2024-07-29T19:16:36.587Z] Platform:      win32
+[debug] [2024-07-29T19:16:36.587Z] Node Version:  v18.16.1
+[debug] [2024-07-29T19:16:36.589Z] Time:          Mon Jul 29 2024 21:16:36 GMT+0200 (South Africa Standard Time)
+[debug] [2024-07-29T19:16:36.590Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-29T19:16:36.607Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-29T19:16:36.608Z] > authorizing via signed-in user (zuluarnold0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Sipho Mahlangu\Documents\cv-projects\mpumalanga-college
+
