@@ -3,7 +3,7 @@ import { PureComponent } from 'react';
 import Contact from '../../component/Contact';
 import Hero from '../../component/Hero';
 import Footer from '../../component/Footer';
-import Map from '../../component/Map';
+// import Map from '../../component/Map';
 import FooterDetails from '../../component/FooterDetails';
 
 class ContactPageComponent extends PureComponent {
@@ -18,7 +18,7 @@ class ContactPageComponent extends PureComponent {
             <div>
                 <Hero data={data} />
                 <Contact />
-                <Map />
+                {/* <Map /> */}
                 <FooterDetails />
                 <Footer />
             </div>
