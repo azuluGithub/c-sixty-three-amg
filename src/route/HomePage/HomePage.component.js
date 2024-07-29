@@ -11,7 +11,7 @@ import Footer from '../../component/Footer';
 import FeaturedCourses from '../../component/FeaturedCourses';
 import HomeTotal from '../../component/HomeTotal';
 import HomeStudents from '../../component/HomeStudents';
-import Map from '../../component/Map';
+// import Map from '../../component/Map';
 import Testimonials from '../../component/Testimonials';
 
 class HomePageComponent extends PureComponent {
@@ -29,7 +29,7 @@ class HomePageComponent extends PureComponent {
                 <Testimonials />
                 <HomeStudents />
                 <NewsLetter />
-                <Map />
+                {/* <Map /> */}
                 <FooterDetails />
                 <Footer />
             </div>
